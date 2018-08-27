@@ -8,7 +8,7 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get -y install qt59base qt59imageformats qt59svg qt59charts-no-lgpl qt59tools qt59multimedia qt59webengine qt59webchannel libmagic-dev libpulse-dev libarchive-dev
+  - sudo apt-get -y install qt59base qt59imageformats qt59svg qt59charts-no-lgpl qt59tools qt59multimedia qt59webengine qt59webchannel qt59x11extras libmagic-dev libpulse-dev libarchive-dev
   - source /opt/qt*/bin/qt*-env.sh
 
 script:
