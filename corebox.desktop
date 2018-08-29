@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=CoreBox
+Comment=Combination of some common desktop apps
+Exec=coreBox
+Icon=CoreBox
+Categories=Utility;FileTools;Core;Qt;
+Terminal=false
+StartupNotify=true
