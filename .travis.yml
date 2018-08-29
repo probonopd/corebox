@@ -20,17 +20,7 @@ script:
   - unset QTDIR; unset QT_PLUGIN_PATH ; unset LD_LIBRARY_PATH
   - export LD_LIBRARY_PATH=$(readlink -f ../library/libcarchiver/):$(readlink -f ../library/libcpdf/):$(readlink -f ../library/libcsys/):$(readlink -f ../library/libcterminal/)
   - export VERSION=$(git rev-parse --short HEAD) # linuxdeployqt uses this for naming the file
-  - cat > appdir/usr/share/applications/corebox.desktop <<\EOF
-  - [Desktop Entry]
-  - Type=Application
-  - Name=CoreBox
-  - Comment=Combination of some common desktop apps
-  - Exec=coreBox
-  - Icon=CoreBox
-  - Categories=Utility;FileTools;Core;Qt;
-  - Terminal=false
-  - StartupNotify=true
-  - EOF
+  - cp corebox.desktop appdir/usr/share/applications/corebox.desktop
   - ./linuxdeployqt-continuous-x86_64.AppImage appdir/usr/share/applications/*.desktop -appimage
 
 after_success:
